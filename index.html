@@ -78,19 +78,17 @@
             const username = document.getElementById("usernameInput").value;
             const amount = document.getElementById("amountInput").value;
         
-            usernames.push(username);
-            amounts.push(amount);
         
+              var table = document.getElementById("table-1")
+        var row = table.insertRow();
+        var cell=row.insertCell();
+        cell.innerHTML=username
+        cell=row.insertCell();
+        cell.innerHTML=amount
+        usernames.push(username);
+            amounts.push(amount);
             
-            let h1_element = document.createElement('h1')
-            h1_element.style.fontSize = '24px'
-            h1_element.textContent = `Username: ${username}`
-            let h11_element = document.createElement('h1')
-            h11_element.style.fontSize = '24px'
-            h11_element.textContent = `AmntofMoney: ${amount}`
-            let parent_div = document.getElementById("resultDiv")
-            parent_div.appendChild(h1_element)
-            parent_div.appendChild(h11_element)
+          
             
         }
         let randomBtn= document.getElementById('randomBtn')
